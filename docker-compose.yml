@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  golang:
+    build: golang
+    ports:
+      - "3000:3000"
+    environment:
+      - "ENV_TEST=envtest"
+    volumes:
+      - "./src:/go" #共有フォルダの設定
+    stdin_open: true
